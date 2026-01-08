@@ -46,12 +46,50 @@ p {
     height: 250px; /* Fixed height for images */
     object-fit: cover; /* Ensures images cover the area without distortion */
     display: block;
+    transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+.card img:hover {
+    transform: scale(1.05); /* Slightly grow image on hover */
 }
 
 .card-caption {
     padding: 15px;
     font-size: 1.1em;
     color: #a0522d; /* Sienna for captions */
+}
+
+#quote-section {
+    margin: 40px auto;
+    padding: 25px;
+    background-color: #fffacd; /* Lemon Chiffon for speech bubble */
+    border-radius: 20px;
+    max-width: 700px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    border: 2px solid #f0e68c; /* Khaki border */
+}
+
+#quote-section::before {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    width: 30px;
+    height: 30px;
+    background-color: #fffacd;
+    border-right: 2px solid #f0e68c;
+    border-bottom: 2px solid #f0e68c;
+    z-index: -1;
+}
+
+#quote-display {
+    font-family: 'Brush Script MT', cursive; /* Playful cursive font */
+    font-size: 1.6em;
+    color: #5a3d2b; /* Darker brown for text */
+    font-style: italic;
+    margin: 0;
 }
 
 footer {
@@ -75,6 +113,15 @@ footer {
     .card img {
         height: 200px;
     }
+
+    #quote-section {
+        max-width: 90%;
+        padding: 20px;
+    }
+
+    #quote-display {
+        font-size: 1.4em;
+    }
 }
 
 @media (max-width: 480px) {
@@ -89,5 +136,14 @@ footer {
 
     .card img {
         height: 180px;
+    }
+
+    #quote-section {
+        padding: 15px;
+        margin: 20px auto;
+    }
+
+    #quote-display {
+        font-size: 1.2em;
     }
 }
