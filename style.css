@@ -92,6 +92,76 @@ p {
     margin: 0;
 }
 
+#tvm-calculator-section {
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #f5deb3; /* Wheat background */
+    border-radius: 10px;
+    max-width: 700px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #8b4513; /* SaddleBrown border */
+    color: #5a3d2b; /* Darker brown text */
+}
+
+#tvm-calculator-section h2 {
+    color: #8b4513; /* SaddleBrown for heading */
+    margin-bottom: 25px;
+    font-size: 2em;
+}
+
+.calculator-inputs label {
+    display: block;
+    text-align: left;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #a0522d; /* Sienna */
+}
+
+.calculator-inputs input[type="number"] {
+    width: calc(100% - 20px);
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #d2b48c; /* Tan */
+    border-radius: 5px;
+    font-size: 1.1em;
+    box-sizing: border-box; /* Include padding in width */
+    color: #333;
+    background-color: #fff8dc; /* Cornsilk */
+}
+
+.calculator-inputs button {
+    background-color: #a0522d; /* Sienna */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.calculator-inputs button:hover {
+    background-color: #8b4513; /* SaddleBrown */
+}
+
+.calculator-result {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px dashed #d2b48c; /* Tan dashed line */
+}
+
+.calculator-result h3 {
+    color: #a0522d; /* Sienna */
+    font-size: 1.8em;
+    margin: 0;
+}
+
+.calculator-result span {
+    color: #5a3d2b; /* Darker brown for the result value */
+    font-weight: bold;
+}
+
 footer {
     margin-top: 50px;
     padding: 20px;
@@ -122,6 +192,29 @@ footer {
     #quote-display {
         font-size: 1.4em;
     }
+
+    #tvm-calculator-section {
+        max-width: 90%;
+        padding: 25px;
+    }
+
+    #tvm-calculator-section h2 {
+        font-size: 1.8em;
+    }
+
+    .calculator-inputs input[type="number"] {
+        width: calc(100% - 10px);
+        padding: 10px;
+    }
+
+    .calculator-inputs button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+
+    .calculator-result h3 {
+        font-size: 1.6em;
+    }
 }
 
 @media (max-width: 480px) {
@@ -145,5 +238,31 @@ footer {
 
     #quote-display {
         font-size: 1.2em;
+    }
+
+    #tvm-calculator-section {
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    #tvm-calculator-section h2 {
+        font-size: 1.5em;
+        margin-bottom: 15px;
+    }
+
+    .calculator-inputs input[type="number"] {
+        padding: 8px;
+        font-size: 1em;
+        margin-bottom: 15px;
+    }
+
+    .calculator-inputs button {
+        padding: 8px 15px;
+        font-size: 0.9em;
+        margin-top: 5px;
+    }
+
+    .calculator-result h3 {
+        font-size: 1.4em;
     }
 }

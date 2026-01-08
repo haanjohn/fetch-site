@@ -12,4 +12,25 @@ document.addEventListener('DOMContentLoaded', () => {
         const randomIndex = Math.floor(Math.random() * quotes.length);
         quoteDisplay.textContent = quotes[randomIndex];
     }
+
+    const calculateFVButton = document.getElementById('calculateFV');
+    if (calculateFVButton) {
+        calculateFVButton.addEventListener('click', () => {
+            const presentValue = parseFloat(document.getElementById('presentValue').value);
+            const interestRate = parseFloat(document.getElementById('interestRate').value) / 100;
+            const numPeriods = parseFloat(document.getElementById('numPeriods').value);
+            const futureValueResult = document.getElementById('futureValueResult');
+
+            if (isNaN(presentValue) || isNaN(interestRate) || isNaN(numPeriods)) {
+                futureValueResult.textContent = 'Please enter valid numbers.';
+                futureValueResult.style.color = 'red';
+                return;
+            }
+
+            // FV = PV * (1 + I/Y)^N
+            const futureValue = presentValue * Math.pow((1 + interestRate), numPeriods);
+            futureValueResult.textContent = `$${futureValue.toFixed(2)}`;
+            futureValueResult.style.color = '#5a3d2b'; // Reset color if it was red
+        });
+    }
 });
